@@ -49,7 +49,7 @@ const Home = () => {
             <div className='searchBox-container'>
                 <form onSubmit={handleForm}>
                     <input
-                        type='text'
+                        type='number'
                         className='zipCode'
                         placeholder='Enter your zip code...'
                         value={zip}
