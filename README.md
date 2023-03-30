@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+<h1 align="center">:sunny:Weather App:sunny:</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>Description:</h2>
+<p>The Weather App is a user-friendly and intuitive weather application that prompts the user to input their zip code and promptly displays the corresponding location name, current temperature, a concise and informative description of the weather, along with the high and low temperatures expected for the day. Additionally, this efficient app also provides the user with the sunrise and sunset times, adding an extra layer of useful information for planning your day accordingly.</p>
 
-## Available Scripts
+<h2>Technologies:</h2>
+<ul>
+  <li>HTML5</li>
+  <li>CSS3</li>
+  <li>JavaScript</li>
+  <li>React</li>
+</ul>
 
-In the project directory, you can run:
+<h2>APIs:</h2>
+<ul>
+  <li><a href="https://www.smarty.com/docs/local/us-zipcode-api">Smarty Zip Code API</a></li>
+  <li><a href="https://openweathermap.org/api">OpenWeather API</a></li>
+</ul>
 
-### `npm start`
+<h2>How It Works:</h2>
+<p>Upon the user inputting a zip code and triggering a search, the Weather App promptly executes an efficient Axios GET request to the <a href="https://www.smarty.com/docs/local/us-zipcode-api">Smarty Zip Code API</a>, utilizing its dynamic features to gather a wealth of location-specific information. As a response, the <a href="https://www.smarty.com/docs/local/us-zipcode-api">Smarty Zip Code API</a> quickly furnishes the app with precise longitude and latitude data for the entered zip code, which is subsequently used to execute another impeccably precise Axios GET request to the <a href="https://openweathermap.org/api">OpenWeather API</a>. The OpenWeather API in turn, furnishes the app with an incredibly comprehensive and insightful range of corresponding weather data for the given location. With all the necessary data now in hand, the app meticulously updates the states with the latest information, resulting in the correct and up-to-date weather data being displayed accurately on the app's intuitive user interface.</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h2>Deployment:</h2>
+This React App is deployed using Github Pages and can be viewed at:<br>
+https://xzadex.github.io/WeatherApp/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h2>Images:</h2>
+<p align="center"><img src="https://images2.imgbox.com/c5/6b/T9ci8Bui_o.png" alt="image host"/></p>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
