@@ -22,15 +22,14 @@ const Home = () => {
     const handleForm = (e) => {
         e.preventDefault();
         setIsLoading(true);
-        axios.get(`https://us-zipcode.api.smartystreets.com/lookup?key=${process.env.REACT_APP_API_KEY01}&city=&state=&zipcode=${zip}`)
+        axios.get(`http://api.openweathermap.org/geo/1.0/zip?zip=${zip},US&appid=${process.env.REACT_APP_API_KEY02}`)
         .then((res)=>{
-            setCity(res.data[0].zipcodes[0].default_city);
-            setState(res.data[0].zipcodes[0].state_abbreviation);
     
             Promise.all([
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${res.data[0].zipcodes[0].latitude}&lon=${res.data[0].zipcodes[0].longitude}&appid=${process.env.REACT_APP_API_KEY02}&units=imperial`)
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${res.data.lat}&lon=${res.data.lon}&appid=${process.env.REACT_APP_API_KEY02}&units=imperial`)
             ])
             .then(([weatherRes])=>{
+                setCity(weatherRes.data.name);
                 setCurrentTemp(weatherRes.data.main.temp)
                 setHigh(weatherRes.data.main.temp_max)
                 setLow(weatherRes.data.main.temp_min)
@@ -75,7 +74,7 @@ const Home = () => {
                 <div className='content-container'>
                     <div className='weather-card'>
                         <h3 className='location-name'>
-                            {city}, {state}
+                            {city}
                         </h3>
                         <p className='main-temp'>{Math.round(currentTemp)}°</p>
                         <p className='description'>{description}</p>
