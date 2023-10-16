@@ -22,7 +22,7 @@ const Home = () => {
     const handleForm = (e) => {
         e.preventDefault();
         setIsLoading(true);
-        axios.get(`http://api.openweathermap.org/geo/1.0/zip?zip=${zip},US&appid=${process.env.REACT_APP_API_KEY02}`)
+        axios.get(`https://api.openweathermap.org/geo/1.0/zip?zip=${zip},US&appid=${process.env.REACT_APP_API_KEY02}`)
         .then((res)=>{
     
             Promise.all([
